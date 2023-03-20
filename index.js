@@ -31,11 +31,11 @@ const compareGuess = () => {
 
   // check the value low or high
   if (userGuess.length < maxGuess) {
-    if (userNumber > compareGuess) {
+    if (userNumber > computerGuess) {
       userGuessUpdate.innerHTML = "Your Guess Is High 😯";
       userNumberupdate.value = "";
       startNewGame();
-    } else if (userNumber > compareGuess) {
+    } else if (userNumber < computerGuess) {
       userGuessUpdate.innerHTML = "Your Guess Is Low 😒";
       userNumberupdate.value = "";
       startNewGame();
@@ -45,12 +45,12 @@ const compareGuess = () => {
       startNewGame();
     }
   } else {
-    if (userNumber > compareGuess) {
-      userGuessUpdate.innerHTML = `You Loose!! Correct Number Was ${compareGuess}`;
+    if (userNumber > computerGuess) {
+      userGuessUpdate.innerHTML = `You Loose!! Correct Number Was ${computerGuess}`;
       userNumberupdate.value = "";
       startNewGame();
-    } else if (userNumber > compareGuess) {
-      userGuessUpdate.innerHTML = `You Loose!! Correct Number Was ${compareGuess}`;
+    } else if (userNumber < computerGuess) {
+      userGuessUpdate.innerHTML = `You Loose!! Correct Number Was ${computerGuess}`;
       userNumberupdate.value = "";
       startNewGame();
     } else {
